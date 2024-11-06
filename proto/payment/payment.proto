@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package hello;
+package payment;
 
 // replace this with your own github username and repo
 // github.com/<username>/<repo>/protogen/go/... 
