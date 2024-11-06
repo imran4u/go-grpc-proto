@@ -26,10 +26,10 @@ jobs:
         shell: bash
         run: |
           make pipeline-build
-      - name: Generate Go Gateway source
-        shell: bash
-        run: |
-          make pipeline-build-gateway
+      # - name: Generate Go Gateway source
+      #   shell: bash
+      #   run: |
+      #     make pipeline-build-gateway
       - name: Commit generated files
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
