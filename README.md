@@ -1,5 +1,7 @@
 # go-grpc
 
+Git-hub repo [ref](https://github.com/timpamungkas/my-grpc-proto)
+
 The Github repository should contains the following folders:
 
 proto/... : to store protocol buffers schema

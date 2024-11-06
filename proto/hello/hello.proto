@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package hello;
+
+// replace this with your own github username and repo
+// github.com/<username>/<repo>/protogen/go/... 
+option go_package = "github.com/timpamungkas/my-grpc-proto/protogen/go/hello";
+
+message HelloRequest { 
+  string name = 1;
+  uint32 age = 16;
+}
+
+message HelloResponse { 
+  string greet = 1;
+}
+
+service HelloService {
+  rpc SayHello(HelloRequest) returns (HelloResponse) {}
+  rpc SayManyHellos(HelloRequest) returns (stream HelloResponse) {}
+  rpc SayHelloToEveryone(stream HelloRequest) returns (HelloResponse) {}
+  rpc SayHelloContinuous(stream HelloRequest) returns (stream HelloResponse) {}
+}
