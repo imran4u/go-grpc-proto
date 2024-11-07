@@ -4,7 +4,7 @@ package transaction;
 
 // replace this with your own github username and repo
 // github.com/<username>/<repo>/protogen/go/... 
-option go_package = "github.com/imran4u/go-grpc-proto/protogen/go/hello";
+option go_package = "github.com/imran4u/go-grpc-proto/protogen/go/transaction";
 
 message HelloRequest { 
   string name = 1;
