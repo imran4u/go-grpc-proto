@@ -2,9 +2,9 @@
 // versions:
 // - protoc-gen-go-grpc v1.5.1
 // - protoc             v3.12.4
-// source: proto/transaction/transaction.proto
+// source: proto/payment/payment.proto
 
-package hello
+package payment
 
 import (
 	context "context"
@@ -19,10 +19,10 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	HelloService_SayHello_FullMethodName           = "/transaction.HelloService/SayHello"
-	HelloService_SayManyHellos_FullMethodName      = "/transaction.HelloService/SayManyHellos"
-	HelloService_SayHelloToEveryone_FullMethodName = "/transaction.HelloService/SayHelloToEveryone"
-	HelloService_SayHelloContinuous_FullMethodName = "/transaction.HelloService/SayHelloContinuous"
+	HelloService_SayHello_FullMethodName           = "/payment.HelloService/SayHello"
+	HelloService_SayManyHellos_FullMethodName      = "/payment.HelloService/SayManyHellos"
+	HelloService_SayHelloToEveryone_FullMethodName = "/payment.HelloService/SayHelloToEveryone"
+	HelloService_SayHelloContinuous_FullMethodName = "/payment.HelloService/SayHelloContinuous"
 )
 
 // HelloServiceClient is the client API for HelloService service.
@@ -196,7 +196,7 @@ type HelloService_SayHelloContinuousServer = grpc.BidiStreamingServer[HelloReque
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var HelloService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "transaction.HelloService",
+	ServiceName: "payment.HelloService",
 	HandlerType: (*HelloServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -222,5 +222,5 @@ var HelloService_ServiceDesc = grpc.ServiceDesc{
 			ClientStreams: true,
 		},
 	},
-	Metadata: "proto/transaction/transaction.proto",
+	Metadata: "proto/payment/payment.proto",
 }
